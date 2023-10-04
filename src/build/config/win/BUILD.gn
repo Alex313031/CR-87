@@ -167,8 +167,8 @@ config("compiler") {
       cflags += [
         "/O2",
         "-Xclang", "-O3",
-        "-Xclang", "-ffp-contract=fast",
-        "/arch:AVX2",
+        "-mavx",
+        "-maes",
         "-Wno-unused-command-line-argument",
       ]
     }
