@@ -7,4 +7,6 @@ Personal repo for hosting files to successfully build Chromium 87 on Linux, or W
 
 M87 was the last "classic" Chromium, with support for flash, NaCl, no MV3 support, and last to be able to be built on Windows 7.
 
+Includes Flash Player from https://github.com/darktohka/clean-flash-builds.
+
 Has a few patches and optimizations backported from [Thorium](https://thorium.rocks/).
