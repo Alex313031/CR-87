@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Copyright (c) 2022 Alex313031.
+# Copyright (c) 2023 Alex313031.
 
 YEL='\033[1;33m' # Yellow
 CYA='\033[1;96m' # Cyan
@@ -17,7 +17,7 @@ try() { "$@" || die "${RED}Failed $*"; }
 
 export NINJA_SUMMARIZE_BUILD=1 &&
 
-./src/third_party/depot_tools/autoninja -C ~/chromium/src/out/test chrome chrome_sandbox chromedriver clear_key_cdm chrome/installer/linux:stable_deb -j$@ &&
+autoninja -C ~/chromium/src/out/test chrome chrome_sandbox chromedriver clear_key_cdm chrome/installer/linux:stable_deb -j$@ &&
 
 tput sgr0 &&
 
