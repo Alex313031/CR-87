@@ -17,7 +17,7 @@ try() { "$@" || die "${RED}Failed $*"; }
 
 export NINJA_SUMMARIZE_BUILD=1 &&
 
-autoninja -C ~/chromium/src/out/test chrome chrome_sandbox chromedriver clear_key_cdm chrome/installer/linux:stable_deb -j$@ &&
+autoninja -C ~/chromium/src/out/87 chrome chrome_sandbox chromedriver clear_key_cdm chrome/installer/linux:stable_deb -j$@ &&
 
 tput sgr0 &&
 

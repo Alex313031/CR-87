@@ -18,7 +18,7 @@ try() { "$@" || die "${RED}Failed $*"; }
 # Build Thorium and mini_installer
 export NINJA_SUMMARIZE_BUILD=1 &&
 
-autoninja -C ~/chromium/src/out/test chrome chromedriver clear_key_cdm setup mini_installer -j$@ &&
+autoninja -C ~/chromium/src/out/87 chrome chromedriver clear_key_cdm setup mini_installer -j$@ &&
 
 tput sgr0 &&
 
