@@ -72,4 +72,4 @@ enable_mse_mpeg2ts_stream_parser = true
 use_thin_lto = true
 thin_lto_enable_optimizations = true
 chrome_pgo_phase = 2
-pgo_data_path = "/home/alex/chromium/src/chrome/build/pgo_profiles/chrome-linux-4280-1607005851-d5397009024f8920d3152333e5340c655d244c22.profdata"
+pgo_data_path = "/home/alex/chromium/src/chrome/build/pgo_profiles/chrome-linux-4280-1605979728-e094388978ff05a79eab54481b394745bd068bcd.profdata"
