@@ -1,9 +1,1 @@
-todo thorium:
-
-reverse ctrl and alt:
-
-{ui::VKEY_P, ui::EF_CONTROL_DOWN | ui::EF_ALT_DOWN, IDC_BASIC_PRINT},
-
-update patches.md:
-
-and simpler omnibox prevent elisions in new file, remove ungoogled patch
+## TODO
