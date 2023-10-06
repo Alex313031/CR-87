@@ -68,6 +68,10 @@ printf "\n"
 printf "${YEL}Downloading PGO Profiles for Linux, Windows, and Mac...\n" &&
 printf "\n" &&
 
+python3 tools/update_pgo_profiles.py --target=linux update --gs-url-base=chromium-optimization-profiles/pgo_profiles &&
+
+python3 tools/update_pgo_profiles.py --target=win64 update --gs-url-base=chromium-optimization-profiles/pgo_profiles &&
+
 printf "${GRE}Done!\n"
 tput sgr0 &&
 
