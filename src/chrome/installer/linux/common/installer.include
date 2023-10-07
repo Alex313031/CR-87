@@ -162,9 +162,6 @@ stage_install_common() {
     install -m 755 "${OUTPUTDIR}/chromedriver" "${STAGEDIR}/${INSTALLDIR}/"
     install -m 644 "${OUTPUTDIR}/libffmpeg.so" "${STAGEDIR}/${INSTALLDIR}/"
     install -m 644 "${OUTPUTDIR}/libffmpeg.so" "${STAGEDIR}/${INSTALLDIR}/lib"
-    install -m 755 "${OUTPUTDIR}/libm.so.6" "${STAGEDIR}/${INSTALLDIR}/lib"
-    install -m 644 "${OUTPUTDIR}/libclearkeycdm.so" "${STAGEDIR}/${INSTALLDIR}/"
-    install -m 644 "${OUTPUTDIR}/libclearkeycdm.so" "${STAGEDIR}/${INSTALLDIR}/lib"
     cp -r "${OUTPUTDIR}/resources/." "${STAGEDIR}/${INSTALLDIR}/resources/"
   else
     install -m 644 "${OUTPUTDIR}/theme_resources_100_percent.pak" "${STAGEDIR}/${INSTALLDIR}/"

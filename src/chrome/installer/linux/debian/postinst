@@ -1,0 +1,32 @@
+#!/bin/sh
+#
+# Copyright (c) 2009 The Chromium Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+set -e
+
+@@include@@../common/postinst.include
+
+# Add to the alternatives system
+#
+# On Ubuntu 12.04, we have the following priorities
+# (which can be obtain be installing browsers and running
+# update-alternatives --query x-www-browser):
+#
+# /usr/bin/epiphany-browser  85
+# /usr/bin/firefox           40
+# /usr/bin/konqueror         30
+#
+# While we would expect these values to be keyed off the most popular
+# browser (Firefox), in practice, we treat Epiphany as the lower bound,
+# resulting in the following scheme:
+
+@@include@@../common/apt.include
+
+@@include@@../common/symlinks.include
+
+remove_udev_symlinks
+
+# Run the cron job immediately to perform repository configuration.
+nohup sh /etc/cron.daily/@@PACKAGE@@ > /dev/null 2>&1 &
