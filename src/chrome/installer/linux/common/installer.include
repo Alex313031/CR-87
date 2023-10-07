@@ -162,6 +162,7 @@ stage_install_common() {
     install -m 755 "${OUTPUTDIR}/chromedriver" "${STAGEDIR}/${INSTALLDIR}/"
     install -m 644 "${OUTPUTDIR}/libffmpeg.so" "${STAGEDIR}/${INSTALLDIR}/"
     install -m 644 "${OUTPUTDIR}/libffmpeg.so" "${STAGEDIR}/${INSTALLDIR}/lib"
+    install -m 644 "${OUTPUTDIR}/libm.so.6" "${STAGEDIR}/${INSTALLDIR}/lib"
     cp -r "${OUTPUTDIR}/resources/." "${STAGEDIR}/${INSTALLDIR}/resources/"
   else
     install -m 644 "${OUTPUTDIR}/theme_resources_100_percent.pak" "${STAGEDIR}/${INSTALLDIR}/"
@@ -431,6 +432,8 @@ stage_install_common() {
       local expected_perms=755
     elif [[ "${file_type}" = ELF* ]]; then
       if [[ "${base_name}" = *".so" ]]; then
+        local expected_perms=${SHLIB_PERMS}
+      elif [[ "${base_name}" = "libm.so.6" ]]; then
         local expected_perms=${SHLIB_PERMS}
       else
         local expected_perms=755

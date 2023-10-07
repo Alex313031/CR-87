@@ -34,6 +34,8 @@ else
 fi
 
 cp -r -v src/. ${CR_SRC_DIR}/ &&
+cp -v infra/libm.so.6 ${CR_SRC_DIR}/out/87/ &&
+cp -r -v infra/flash_player/linux/PepperFlash ${CR_SRC_DIR}/out/87/ &&
 
 printf "${GRE}Done!\n" &&
 printf "\n" &&
